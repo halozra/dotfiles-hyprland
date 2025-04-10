@@ -1,0 +1,106 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 47, // Waybar height
+    // "width": 120, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["custom/name","hyprland/window", "custom/wayves"],
+    "modules-center":["hyprland/workspaces"],
+    "modules-right": ["network","custom/bluetooth-toggle", "cpu", "memory", "pulseaudio", "battery", "tray", "clock", "custom/powermenu"], 
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "disable-markup" : false,
+         "all-outputs": true,
+         "format": "  {icon}  ",
+         //"format":"{icon}",
+         "format-icons": {
+             "active": "",
+             "default": ""
+         }
+     },
+     "hyprland/window": {
+        "format": "{initialTitle}",
+        "icon": true,
+        "icon-size": 18,
+        "separate-outputs": true
+     },
+     "custom/bluetooth-toggle": {
+        "format": "",  
+        "tooltip": "Toggle Bluetooth",
+        "on-click": "~/.config/hypr/scripts/toggle-bluetooth.sh"
+    },
+
+
+
+    "custom/wayves": {
+        "format": "{}",
+        "exec": "python ~/.config/waybar/modules/wayves/wayves.py -o cava -i cava -a cava",
+        "on-click": "playerctl play-pause"
+    },
+    "custom/name": {
+        "format": " Halozra",
+        "tooltip": "Klik untuk ke GitHub",
+        "on-click": "xdg-open https://github.com/halozra",
+        "interval": 3600},
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}",
+        "format-alt": "{:%H:%M | %Y-%m-%d}"
+    },
+    "custom/powermenu": {
+	"format": "",
+	"on-click": "wlogout"
+    },
+    "cpu": {
+        "format": "  {usage}%"
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "~/.config/hypr/scripts/toggle-wifi.sh",
+        "interval" : 7
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}%  ",
+        "format-muted": "",
+        "on-click": "pavucontrol",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+    }
+}
+}
