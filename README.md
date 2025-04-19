@@ -13,7 +13,7 @@ Ini adalah konfigurasi pribadiku buat Hyprland WM yang cantik, smooth, dan tentu
 
 ---
 
-## 📂 Structure
+```
 dotfiles-hyprland-violet/
 ├── hypr/
 │   ├── hyprland.conf
@@ -40,6 +40,8 @@ dotfiles-hyprland-violet/
 │           └── default/
 │               └── style.css
 └── README.md
+```
+
 
 
 
