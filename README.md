@@ -50,7 +50,7 @@ dotfiles-hyprland-violet/
 
 ## 🛠️ Installation
 
-```bash```
+```bash
 # Clone repo dotfiles
 git clone https://github.com/USERNAME/dotfiles-hyprland-violet.git
 cd dotfiles-hyprland-violet
