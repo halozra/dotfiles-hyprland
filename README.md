@@ -53,7 +53,7 @@ dotfiles-hyprland-violet/
 ```bash
 # Clone repo dotfiles
 git clone https://github.com/halozra/dotfiles-hyprland.git
-cd dotfiles-hyprland-violet
+cd dotfiles-hyprland
 
 # Copy configs
 cp -r hypr ~/.config/
