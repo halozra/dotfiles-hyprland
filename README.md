@@ -4,7 +4,14 @@ Ini adalah konfigurasi pribadiku buat Hyprland WM yang cantik, smooth, dan tentu
 
 ---
 
+## ✨ Preview
+
+![Preview](./preview/hyprland-showcase.png)
+
+---
+
 ## ✨ Features
+
 - 💠 Hyprland setup with rounded corners, blur, and animations
 - 🌙 Waybar with themed colors and matching font
 - 💕 Rofi with wallpaper background and romantic style
@@ -25,10 +32,6 @@ dotfiles-hyprland-violet/
 ├── rofi/
 │   ├── config.rasi
 │   └── theme.rasi
-├── scripts/
-│   ├── screenshot.sh
-│   ├── powermenu.sh
-│   └── lock.sh
 ├── wlogout/
 │   ├── meson.build
 │   ├── src/
@@ -41,10 +44,6 @@ dotfiles-hyprland-violet/
 │               └── style.css
 └── README.md
 ```
-
-
-
-
 
 ---
 
@@ -59,17 +58,4 @@ cd dotfiles-hyprland
 cp -r hypr ~/.config/
 cp -r waybar ~/.config/
 cp -r rofi ~/.config/
-cp -r scripts ~/scripts
-chmod +x ~/scripts/*
-
-# Install wlogout secara manual
-git clone https://github.com/ArtsyMacaw/wlogout.git
-cd wlogout
-
-# Pastikan dependencies sudah ada
-sudo dnf install gtk3-devel gtk-layer-shell-devel scdoc meson ninja-build -y
-
-# Build dan install
-meson setup build
-ninja -C build
-sudo ninja -C build install
+```
