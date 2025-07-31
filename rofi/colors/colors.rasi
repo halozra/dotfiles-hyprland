@@ -1,0 +1,58 @@
+configuration {
+  show-icons: true;
+  drun-display-format: "{icon} {name}";
+  cycle: false;
+
+}
+
+* {
+  font: "Fira Sans 12";
+  background: #fefefe;
+  foreground: #333;
+  border: 0;
+  padding: 4px;
+  spacing: 6;
+}
+
+window {
+  width: 30%;
+  border-radius: 12px;
+  location: center;
+  background-color: @background;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  spacing: 10;
+}
+
+inputbar {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+listview {
+  columns: 1;
+  lines: 3;
+  fixed-height: true;
+  border: 0;
+  spacing: 6px;
+  scrollbar: false;
+}
+
+element {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+element selected {
+  background-color: #dcdcdc;
+  color: #111;
+}
+
+element-icon {
+  size: 28px;
+  padding: 0 8px;
+}

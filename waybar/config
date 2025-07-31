@@ -15,8 +15,9 @@
 
 
   "custom/menu": {
-    "format": "",
-    "tooltip": false
+    "format": "W",
+    "tooltip": false,
+    "on-click":"xdg-open https://github.com/halozra"
   },
   "hyprland/workspaces": {
     "on-click": "activate",
